@@ -1,0 +1,387 @@
+*,*::before,*::after{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   outline: none;
+   border: none;
+   list-style: none;
+   transition: linear  0.4s;
+   -o-transition: linear  0.4s;
+   -moz-transition: linear  0.4s;
+   -webkit-transition: linear  0.4s;
+   text-decoration: none;
+   overflow-x: hidden;
+}
+html{
+   font-family: 'Poppins', sans-serif;
+}
+body{
+   width: 100%;
+   height: 100vh;
+   font-weight: 400;
+   background-color: rgb(30, 30, 31);
+   background-image: url(../images/Background.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+}
+ /*####### scroll bar  #########*/
+ ::-webkit-scrollbar{
+   width: 5px;
+   background: #f3f1f1d7;
+ }
+ ::-webkit-scrollbar-button{
+   background:  #f3f1f1b7;
+ }
+ ::-webkit-scrollbar-thumb{
+   background: rgb(54, 54, 53);
+ }
+::placeholder{
+   font-size: 16.7px;
+   font-family:'Courier New', Courier, monospace;
+   letter-spacing: 1.5px;
+ }
+ ::selection{
+   background: #f5a425;
+   color: #fff;
+ }
+ ::-moz-selection{
+   background: #f5a425;
+   color: #fff;
+ }
+
+header{
+   position: fixed;
+   padding: 0 4% !important;
+   overflow: hidden;
+   top: 1rem; left: 0; right: 0;
+   background: rgba(95, 94, 94, 0.192);
+   height: 5.2rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   z-index: 99999;
+}
+.header.active{ /* active classlist for  header */
+   height: 6rem; 
+}
+header.header a img{
+   height: 79px;
+}
+a{
+   color: #3CF;
+   font-size: 11.4px;
+ }
+ b{
+   font-size: 16px;
+   font-weight: lighter;
+   color: #eee;
+   position: relative;
+   left: 47%;
+ }
+ a:hover {
+	color: #FC3;
+} 
+.header-area{
+   width: 100%;
+   overflow: hidden;
+   top: 0px;
+   padding-top: 2px;
+   padding-left: 5%;
+   background-color: rgba(250,250,250,0.15);
+   position: absolute;
+   left: 0;
+   right: 0;
+   z-index: 100;
+} 
+.header-area .main-nav {
+   min-height: 80px;
+   background: transparent;
+   display: flex;
+ }
+section.section-page{
+   margin-top: 16rem;
+   position: absolute;
+   height: 20rem;
+   width: 100%;
+   overflow: visible;
+}
+
+.form-section{
+   position: relative;
+   justify-content: center;
+   width: 100%;
+   overflow:visible;
+ }
+ form#sign-in{
+   position: relative;
+   border: 1px solid #eeeeee4b;
+   background: rgba(32, 32, 32, 0.76);
+   width: 38rem;
+   left: 28%;
+   padding: 12px 2%;
+   border-radius: 5px;
+ }
+ .form-section h2{
+   color: #c5c2c2;
+   text-transform: none;
+   position: absolute;
+   left: 37.7%;
+   top: -2rem;
+   font-weight: 900;
+   text-transform: uppercase;
+   text-align: center;
+   overflow: visible;
+   justify-content: center;
+   font-size: 1.3rem;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+ fieldset{
+   margin: 15px 0;
+ }
+ fieldset.password1{
+   margin-bottom: -1.4rem !important;
+ }
+ :is(input[type="text"],[type="email"],[type="password"]){
+   background: inherit;
+   border-bottom: 1px solid #eeeeee3a;
+   padding: 13.5px;
+   width: 100%;
+   color: #eeeeee4d;
+   font-size: 16.7px;
+   font-family:'Courier New', Courier, monospace;
+   letter-spacing: 1.5px;
+ }
+ h5{
+   cursor: pointer;
+   position:relative;
+   bottom: 2rem;
+   left: 30rem;
+   z-index: 400;
+   background-color: inherit;
+   padding: 1% 10px;
+   font-size: 10px;
+   font-family:'Courier New', Courier, monospace;
+   letter-spacing: 1.5px;
+   color: rgb(170, 163, 163);
+ }
+ h4.mail_message{
+   width: auto;
+   padding: 4.7px 9.2px;
+   background: rgb(235, 223, 223);
+   color: #4d4b4b;
+   font-weight: bold;
+   position: relative;
+   display: inline-flex;
+   font-size: 11.2px;
+   align-items: center;
+   text-align: center;
+   border-radius: 1px;
+   left: 40.1%;
+ }
+section span.password{
+   font-size: 9.1px;
+   font-weight: 500;
+   line-height: 1.5;
+   color: rgba(223, 156, 156, 0.904);
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+fieldset span,
+span.sign-in{
+   font-size: 11.4px;
+   color: #868585;
+}
+button[type="submit"]{
+   border-radius: 3px;
+   align-items: center;
+   cursor: pointer;
+   position: relative;
+   left: 37%;
+   background: rgb(95, 139, 175);
+   font-size: 15px;
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   letter-spacing: .4px;
+   font-weight: lighter;
+   color: #fff;
+   padding: 12px 44px;
+}
+button[type="submit"]:hover{
+   opacity: 90%;
+}
+.google_button{
+   height: 45px;
+   width: 150px;
+   position: relative;
+   left: 37%;
+}
+
+
+/* #### footer section #### */
+footer{
+   width: 100%;
+   justify-content: center;
+   height: 5.5rem;
+   overflow: hidden;
+   padding: 0 1.1%;
+   background: none;
+}
+footer > p{
+   border-top: solid 2.8px rgb(63, 58, 58);
+   color: #fff;
+   font-size: 13.5px;
+   position:relative;
+   top: 16px;
+   text-align: center;
+   padding: 3.5vh 0;
+   font-weight: 300;
+}
+footer > p > span{
+   font-size: 12.5px;
+   color: #f5a425;
+   font-weight: 600;
+}
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px){
+   html{
+      font-size: 99% !important;
+   }
+}
+@media screen and (max-width: 1000px){
+   html{
+      font-size: 80% !important;
+   }
+}
+@media screen and (max-width: 900px){
+   header.header a img{
+      height: 55px;
+   }
+   form#sign-in{
+      left: 20%;
+    }
+    button[type="submit"]{
+      left: 20%;
+   }
+   b{
+      left: 30%;
+    }
+    .google_button{
+      left: 20%;
+   }
+}
+@media (max-width: 767px) {
+   *{
+      transition: linear .3s;
+   }
+   .header-area .main-nav .logo {
+     color: #1e1e1e;
+   }
+   .header-area {
+     background-color: #f7f7f7;
+     padding: 0px 15px;
+     height: 100px;
+     text-align: center;
+   }
+}
+@media screen and (max-width: 700px){
+   html{
+      font-size: 70% !important;
+   }
+}
+@media screen and (max-width: 650px){
+   form#sign-in{
+      left: 15%;
+    }
+    .form-section h2{
+      left: 20%;
+      font-size: 17px;
+    }
+    h4.mail_message{
+      font-size: 11px;
+      left: 20.5%;
+    }
+}
+@media screen and (max-width: 550px){
+   form#sign-in{
+      left: 10%;
+    }
+}
+@media screen and (max-width: 500px) {
+   form#sign-in{
+      left: 5%;
+    }
+    h5{
+      left: 27rem;
+      bottom: 2.5rem;
+    }
+    button[type="submit"]{
+      left: 15%;
+   }
+   b{
+      left: 25%;
+    }
+    .google_button{
+      left: 15%;
+   }
+    footer > p{
+      font-size: 10.5px;
+      top: 10px;
+      font-weight: 200;
+   }
+   footer > p > span{
+      font-size: inherit;
+   }
+}
+@media screen and (max-width: 460px) {
+    .header-area .main-nav .logo {
+      font-size: 25px;
+    }
+   form#sign-in{
+      left: 2.5%;
+      width: 95%;
+    }
+    .form-section h2,
+    h4.mail_message{
+      left: 6%;
+    }
+}
+@media screen and (max-width: 380px) {
+    h5{
+      left: 82%;
+    }
+    button[type="submit"]{
+      left: 1% !important;
+   }
+   b{
+      left: 16%;
+      font-size: 14.5px;
+      font-weight: bold;
+    }
+    .google_button{
+      left: 1% !important;
+   }
+}
+@media screen and (max-width: 300px) {
+   html{
+     font-size: 70%;
+   }
+   .form-section h2{
+      font-size: 1.3rem;
+   }
+   button[type="submit"]{
+     left: 1%;
+  }
+}
+
