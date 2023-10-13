@@ -1,2 +1,2 @@
 # Password-recovery-system-PHP
-Forgot password system with php 
+Password Recovery system with php & Mysql
