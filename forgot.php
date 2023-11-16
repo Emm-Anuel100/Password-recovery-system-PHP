@@ -105,9 +105,22 @@ function send_email($email){
    $query = "INSERT INTO  codes (email,code,expire) VALUES ('$email','$code','$expire')";
    mysqli_query($conn,$query);
 
-   $header = "From: emmanuelodel75@gmail.com\n";
-   #Send email 
-   mail($email,'Password reset',"Your password reset code is ".$code,$header); # recipient,subject,message,header
+   
+   ## sendemail to user ##
+   $header  = "From: emmanuelodel75@gmail.com\r\n";
+   $header .= "MIME-Version: 1.0\r\n";
+   $header .= "Content-type: text/html\r\n";
+
+   $to = $email;
+   $subject = 'Password reset';
+   $message = '<html><body><p>Your password reset code is:</p></body></html>'.$code;
+
+   mail($to, $subject, $message, $header);
+   if (mail($to, $subject, $message, $header)) {
+      echo "Email sent successfully!";
+    } else {
+      echo "Failed to send email.";
+    }
 }
 
 function save_password($password){
